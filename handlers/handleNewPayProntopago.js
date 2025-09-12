@@ -81,6 +81,7 @@ export const handleNewPayProntopago = async (req, res) => {
         return res.status(201).json({
             message: "prespuesta pp correcta",
             data: response.data,
+            body: requestPayload,
             status: 201,
         });
 

@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import { handleNewPayProntopago } from '../handlers/handleNewPayProntopago.js';
+import { handleReceptionPayProntopago } from '../handlers/handleReceptionPayProntopago.js';
 
 const app = express();
 
@@ -18,5 +19,6 @@ const router = Router();
 
 // prontopago
 router.post("/newPay", handleNewPayProntopago);
+router.post("/receptionPay", handleReceptionPayProntopago);
 
 export default router;

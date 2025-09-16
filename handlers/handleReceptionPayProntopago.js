@@ -3,7 +3,7 @@ import axios from "axios";
 export const handleReceptionPayProntopago = async (req, res) => {
     try {
         const body = req.body;
-        console.log("body: ", body)
+        console.log("body de la respuesta apriobadaaa: ", body)
 
         const optionsBody = JSON.stringify(body)
 
@@ -19,10 +19,10 @@ export const handleReceptionPayProntopago = async (req, res) => {
             }
         );
 
-        console.log("Respuesta cruda:", response.data);
+        console.log("Respuesta cruda de la respuesta apriobadaaa:", response);
 
         return res.status(201).json({
-            message: "prespuesta pp correcta",
+            message: "prespuesta pp correcta de la respuesta aprobada",
             data: response.data,
             dataCruda: response,
             body: body,
@@ -30,7 +30,7 @@ export const handleReceptionPayProntopago = async (req, res) => {
         });
 
     } catch (error) {
-        console.error("Error al insertar url de pago:", error);
+        console.error("Error al insertar url de pago de la respuesta apriobadaaa:", error);
         return res.status(500).json({ message: "Error del servidor" });
     }
 };

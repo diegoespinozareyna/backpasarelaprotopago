@@ -19,6 +19,7 @@ export const handleNewPayProntopago = async (req, res) => {
             urlFinal: body?.urlFinal,
             urlRejected: body?.urlRejected,
             order: body?.order,
+            theme: body?.theme,
         }
 
         // 👉 Secret key proporcionada por ProntoPaga
@@ -76,7 +77,7 @@ export const handleNewPayProntopago = async (req, res) => {
             }
         );
 
-        console.log("Respuesta cruda:", response.data);
+        console.log("Respuesta cruda:", "response");
 
         return res.status(201).json({
             message: "prespuesta pp correcta",

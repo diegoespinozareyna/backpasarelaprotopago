@@ -24,7 +24,7 @@ export const handleReceptionPayProntopago = async (req, res) => {
         return res.status(201).json({
             message: "prespuesta pp correcta de la respuesta aprobada",
             data: response.data,
-            dataCruda: response,
+            // dataCruda: response,
             body: body,
             status: 201,
         });

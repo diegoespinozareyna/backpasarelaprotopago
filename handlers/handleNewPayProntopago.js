@@ -65,7 +65,8 @@ export const handleNewPayProntopago = async (req, res) => {
         // console.log("data: ", data)
         // 🚀 Enviar con Axios
         const response = await axios.post(
-            "https://sandbox.prontopaga.com/api/payment/new",
+            // "https://sandbox.prontopaga.com/api/payment/new", //dev
+            "https://prontopaga.com/api/payment/new", // prd
             requestPayload,
             {
                 headers: {

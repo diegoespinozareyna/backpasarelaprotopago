@@ -19,7 +19,7 @@ export const handleReceptionPayProntopago = async (req, res) => {
             }
         );
 
-        console.log("Respuesta cruda de la respuesta apriobadaaa:", response);
+        console.log("Respuesta cruda de la respuesta apriobadaaa:", response.data);
 
         return res.status(201).json({
             message: "prespuesta pp correcta de la respuesta aprobada",
@@ -30,7 +30,7 @@ export const handleReceptionPayProntopago = async (req, res) => {
         });
 
     } catch (error) {
-        console.error("Error al insertar url de pago de la respuesta apriobadaaa:", error);
+        console.error("Error al insertar url de pago de la respuesta apriobadaaa desde backend protopaga:", error);
         return res.status(500).json({ message: "Error del servidor" });
     }
 };

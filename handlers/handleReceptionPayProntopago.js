@@ -5,7 +5,8 @@ export const handleReceptionPayProntopago = async (req, res) => {
         const body = req.body;
         console.log("body de la respuesta apriobadaaa: ", body)
 
-        const optionsBody = JSON.stringify(body)
+        // const optionsBody = JSON.stringify(body)
+        const optionsBody = body
 
         const response = await axios.post(
             "https://apipozosanto.inmobackend.site/api/auth/receptionPayProntopaga",
